@@ -7,11 +7,11 @@ import pandas as pd
 print('INÍCIO')
 n1 = 1000
 A1 = [randint(1,1000000000) for i in range(n1)]
-n2 = 2500
+n2 = 10000
 A2 = [randint(1,1000000000) for i in range(n2)]
-n3 = 5000
+n3 = 100000
 A3 = [randint(1,1000000000) for i in range(n3)]
-n4 = 7500
+n4 = 1000000
 A4 = [randint(1,1000000000) for i in range(n4)]
 
 # Insertion
