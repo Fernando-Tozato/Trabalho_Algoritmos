@@ -1,0 +1,17 @@
+Máquina,Algoritmo,Tamanho,Tempo
+1,MergeSort,1000,00:00:00.00
+1,MergeSort,10000,00:00:00.00
+1,MergeSort,100000,00:00:00.00
+1,MergeSort,1000000,00:00:00.02
+1,InsertionSort,1000,00:00:00.12
+1,InsertionSort,10000,00:00:10.11
+1,InsertionSort,100000,00:16:47.30
+1,InsertionSort,1000000,29:18:00.20
+2,MergeSort,1000,00:00:00.00
+2,MergeSort,10000,00:00:00.03
+2,MergeSort,100000,00:00:00.32
+2,MergeSort,1000000,00:00:04.18
+2,InsertionSort,1000,00:00:00.02
+2,InsertionSort,10000,00:00:02.76
+2,InsertionSort,100000,00:05:05.90
+2,InsertionSort,1000000,12:44:31.14
