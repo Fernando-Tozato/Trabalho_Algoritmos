@@ -1,5 +1,5 @@
-def insertion_sort(A:list, n:int):
-    for j in range(1, n):
+def insertion_sort(A):
+    for j in range(1, len(A)):
         chave = A[j]
         i = j - 1
         while i > 0 and A[i] > chave:

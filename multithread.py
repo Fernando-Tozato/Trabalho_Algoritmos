@@ -1,18 +1,16 @@
 from insertion_sort import insertion_sort
 from merge_sort import merge_sort
+from datetime import datetime
 from numpy.random import randint
-import pandas as pd
-import multiprocessing, time
+import multiprocessing
 
 def sort(alg_name, alg, A, n):
-    start_time = time.time()
+    start_time = datetime.now()
     print(f'\nInício {alg_name}, {n}. --------------')
     alg(A.copy())
-    end_time = time.time()
+    end_time = datetime.now()
     total_time = end_time - start_time
     print(f'\nFim {alg_name}, {n}. {total_time}')
-    result_queue.put((alg_name, n, total_time))
-
 
 if __name__ == '__main__':
     ns = [1000, 10000, 100000, 1000000]
