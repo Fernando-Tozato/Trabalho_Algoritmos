@@ -4,7 +4,7 @@ from numpy.random import randint
 import pandas as pd
 import multiprocessing, time
 
-def sort(alg_name, alg, A, n, result_queue):
+def sort(alg_name, alg, A, n):
     start_time = time.time()
     print(f'\nInício {alg_name}, {n}. --------------')
     alg(A.copy())
@@ -21,13 +21,11 @@ if __name__ == '__main__':
         'InsertionSort': insertion_sort,
         'MergeSort': merge_sort
     }
-    results = []
-    result_queue = multiprocessing.Queue()
 
     processos = []
     for n, A in As.items():
         for alg_name, alg in algs.items():
-            p = multiprocessing.Process(target=sort, args=(alg_name, alg, A, n, result_queue))
+            p = multiprocessing.Process(target=sort, args=(alg_name, alg, A, n))
             processos.append(p)
 
     for p in processos:
@@ -35,12 +33,3 @@ if __name__ == '__main__':
 
     for p in processos:
         p.join()
-
-    while not result_queue.empty():
-        results.append(result_queue.get())
-
-    df = pd.DataFrame(results, columns=['Algoritmo', 'Tamanho', 'Tempo'])
-
-    print(df)
-
-    df.to_csv('Tempos.csv', index=False)
