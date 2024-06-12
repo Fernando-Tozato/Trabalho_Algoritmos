@@ -1,4 +1,4 @@
-Máquina,Algoritmo,Tamanho,Tempo
+Máquina,Algoritmo,Tamanho,Tempoa
 1,MergeSort,1000,00:00:00.00
 1,MergeSort,10000,00:00:00.00
 1,MergeSort,100000,00:00:00.00
